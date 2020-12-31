@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    tools:context=".ProfileFragment" >
+
+    <TextView
+        android:id="@+id/profile_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:elevation="1dp"
+        android:text="000"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_frameCard"
+        app:layout_constraintEnd_toEndOf="@+id/profile_frameCard"
+        app:layout_constraintStart_toStartOf="@+id/profile_frameCard" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_iconCard"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:cardCornerRadius="90dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/placeholder" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/profile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/basic"
+        android:text="username"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintStart_toEndOf="@+id/profile_frameCard"
+        app:layout_constraintTop_toTopOf="@+id/profile_frameCard" />
+
+    <TextView
+        android:id="@+id/profile_division"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basic"
+        android:text="division"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/profile_divisionIcon"
+        app:layout_constraintTop_toTopOf="@+id/profile_divisionIcon" />
+
+    <ImageView
+        android:id="@+id/profile_divisionIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/emblem_iron"
+        app:layout_constraintStart_toEndOf="@+id/profile_frameCard"
+        app:layout_constraintTop_toBottomOf="@+id/profile_username" />
+
+    <TextView
+        android:id="@+id/profile_winrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="winrate"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/profile_divisionIcon"
+        app:layout_constraintTop_toBottomOf="@+id/profile_division" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_frameCard"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_iconCard"
+        app:layout_constraintEnd_toEndOf="@+id/profile_iconCard"
+        app:layout_constraintStart_toStartOf="@+id/profile_iconCard"
+        app:layout_constraintTop_toTopOf="@+id/profile_iconCard">
+
+        <ImageView
+            android:id="@+id/profile_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/frame2" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_frameCard">
+
+        <LinearLayout
+            android:id="@+id/profile_matchHistoryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
